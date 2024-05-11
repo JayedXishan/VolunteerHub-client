@@ -10,6 +10,8 @@ import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import Home from './Pages/Home';
 import NeedVolunteer from './Pages/NeedVolunteer';
 import MyProfile from './Pages/MyProfile';
+import Register from './Pages/Register';
+import Login from './Pages/Login';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: '/myprofile',
         element: <MyProfile></MyProfile>,
+      },
+      {
+        path: '/login',
+        element: <Login></Login>,
+      },
+      {
+        path: '/register',
+        element: <Register></Register>,
       }
     ]
   },

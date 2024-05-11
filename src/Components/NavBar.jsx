@@ -140,13 +140,14 @@ const NavBar = () => {
               ) : (
                 <div className="items-center space-x-2 flex-shrink-0  lg:flex">
                   <Link
-                    to="/login"
+                    to="/login" onClick={()=>setActive('0')}
                     className="self-center px-7 py-2 rounded border-2 border-[#4D869C] text-[#4D869C] hidden lg:flex  transition ease-linear delay-200 duration-300 hover:bg-[#4D869C] hover:text-white "
                   >
                     Sign in
                   </Link>
                   <Link
                     to="/register"
+                    onClick={()=>setActive('0')}
                     className="self-center px-8 py-3  rounded bg-[#4D869C] text-white transition ease-linear delay-200 duration-300 hover:bg-[#102C57] hover:text-white "
                   >
                     Sign up
