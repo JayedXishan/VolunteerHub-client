@@ -53,7 +53,6 @@ const NavBar = () => {
                         <p className="font-bold">My Profile</p>
                         <Link to="/addpost">Add Post</Link>
                         <Link to="/managepost">Manage Post</Link>
-                        <Link to="/requestedpost">Requested Post</Link>
                       </li>
                     </ul>
                   </div>
@@ -87,7 +86,7 @@ const NavBar = () => {
                     <li>
                       <Link to="/addpost">Add Post</Link>
                       <Link to="/managepost">Manage Post</Link>
-                      <Link to="/requestedpost">Requested Post</Link>
+                      
                     </li>
                   </ul>
                 </div>
