@@ -9,7 +9,7 @@ const AddVolunteer = () => {
   const { user } = useAuth() || {};
 
   const [startDate, setStartDate] = useState(new Date());
-  console.log(startDate);
+  
   const handleAdd = (e) => {
     e.preventDefault();
 
@@ -21,27 +21,13 @@ const AddVolunteer = () => {
     const location = form.location.value;
     const no_of_volunteer = form.no_of_volunteer.value;
     const deadline = startDate;
-    // const deadline = form.deadline.value;
-    // const time = form.time.value;
-    // const status = form.status.value;
+
     const description = form.description.value;
     const email = user.email;
 
-    let No = "1";
-    if (category === "Healthcare") {
-      No = "1";
-    } else if (category === "Education") {
-      No = "2";
-    } else if (category === "Social Service") {
-      No = "3";
-    } else if (category === "Animal welfare") {
-      No = "4";
-    } else if (category === "Others") {
-      No = "5";
-    }
-
+    
     const item = {
-      No,
+      
       name,
       category,
       location,
@@ -62,11 +48,11 @@ const AddVolunteer = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // Swal.fire({
-        //   title: "Good job!",
-        //   text: "Successfully Added a item!",
-        //   icon: "success",
-        // });
+        Swal.fire({
+          title: "Good job!",
+          text: "Successfully Posted!",
+          icon: "success",
+        });
       });
 
     // fetch("https://pictura-server.vercel.app/Category", {
