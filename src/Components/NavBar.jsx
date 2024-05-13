@@ -52,7 +52,7 @@ const NavBar = () => {
                       <li>
                         <p className="font-bold">My Profile</p>
                         <Link to="/addpost">Add Post</Link>
-                        <Link to="/managepost">Manage Post</Link>
+                        <Link to="/mypost">Manage Post</Link>
                       </li>
                     </ul>
                   </div>
@@ -85,7 +85,7 @@ const NavBar = () => {
                   >
                     <li>
                       <Link to="/addpost">Add Post</Link>
-                      <Link to="/managepost">Manage Post</Link>
+                      <Link to="/mypost">Manage Post</Link>
                       
                     </li>
                   </ul>
