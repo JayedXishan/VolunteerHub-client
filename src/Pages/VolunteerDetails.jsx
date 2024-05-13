@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const VolunteerDetails = () => {
   const volunteers = useLoaderData();
@@ -21,9 +21,10 @@ const VolunteerDetails = () => {
         <div className="flex-1 flex justify-center items-center">
           <div>
             <p>{volunteers.description}</p>
-            <p>{volunteers.deadline}</p>
+            <p>{volunteers.deadline.slice(0,10)}</p>
             <p>{volunteers.location}</p>
             <p>{volunteers.no_of_volunteer}</p>
+            <Link to={`/bevolunteer/${volunteers._id}`}>Be a Volunteer</Link>
           </div>
         </div>
       </div>

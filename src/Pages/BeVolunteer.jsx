@@ -1,47 +1,32 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import { useState } from "react";
-
-const AddVolunteer = () => {
+const BeVolunteer = () => {
+  const volunteers = useLoaderData();
   const { user } = useAuth() || {};
+  const volunteerMail=user.email;
 
-  const [startDate, setStartDate] = useState(new Date());
-  console.log(startDate);
-  const handleAdd = (e) => {
+  const handleReq = (e) => {
     e.preventDefault();
 
     const form = e.target;
 
     const name = form.post_title.value;
     const image = form.image.value;
-    const category = form.Category.value;
+    const category = form.category.value;
     const location = form.location.value;
     const no_of_volunteer = form.no_of_volunteer.value;
-    const deadline = startDate;
-    // const deadline = form.deadline.value;
-    // const time = form.time.value;
-    // const status = form.status.value;
+    const deadline = form.deadline.value;
+    const suggestion = form.suggestion.value;
+    const organizer_mail = form.organizer_mail.value;
+    const status = form.status.value;
     const description = form.description.value;
     const email = user.email;
 
-    let No = "1";
-    if (category === "Healthcare") {
-      No = "1";
-    } else if (category === "Education") {
-      No = "2";
-    } else if (category === "Social Service") {
-      No = "3";
-    } else if (category === "Animal welfare") {
-      No = "4";
-    } else if (category === "Others") {
-      No = "5";
-    }
+    
 
     const item = {
-      No,
       name,
       category,
       location,
@@ -49,10 +34,13 @@ const AddVolunteer = () => {
       no_of_volunteer,
       deadline,
       description,
+      suggestion,
+      organizer_mail,
+      status,
       email,
     };
 
-    fetch("http://localhost:5000/volunteer", {
+    fetch("http://localhost:5000/request", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
@@ -83,25 +71,26 @@ const AddVolunteer = () => {
   };
 
   return (
-    <div className="lg:w-[1170px] mx-auto">
+    <div>
       <div className="flex">
         <div className="flex-grow flex-1 bg-gradient-to-br from-[#4D869C] via-[#7AB2B2] to-[#CDE8E5] flex justify-center items-center">
           <div className="w-[300px] h-[100px] border-2 p-4 flex justify-center items-center">
-            <h3 className="text-4xl font-extrabold text-white">VolunteerHub</h3>
+            <h3 className="text-4xl font-extrabold text-white">
+              Apply Volunteer
+            </h3>
           </div>
         </div>
         <div className="p-6 flex-1 bg-[#CDE8E5] ">
-          <form
-            onSubmit={handleAdd}
-            className="container flex flex-col mx-auto space-y-12"
-          >
+          <form onSubmit={handleReq} className="container flex flex-col mx-auto space-y-12">
             <div className="grid grid-cols-1 gap-4">
               <div className="col-span-full sm:col-span-3">
                 <label className="text-sm">Post Title</label>
                 <input
                   name="post_title"
                   type="text"
-                  placeholder="Item name"
+                  value={volunteers.name}
+                  readOnly
+                  
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
@@ -110,32 +99,31 @@ const AddVolunteer = () => {
                 <input
                   name="image"
                   type="text"
-                  placeholder="https://"
+                  value={volunteers.image}
+                  readOnly
+                 
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600"
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
-                <label htmlFor="username" className="text-sm">
-                  Category
-                </label>
-                <select
-                  name="Category"
-                  className="select select-bordered select-sm w-full  rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
-                >
-                  {/* <option disabled selected>Select</option> */}
-                  <option selected>Healthcare</option>
-                  <option>Education</option>
-                  <option>Social Service</option>
-                  <option>Animal welfare</option>
-                  <option>Others</option>
-                </select>
+                <label className="text-sm">Category</label>
+                <input
+                  name="category"
+                  type="text"
+                  value={volunteers.category}
+                  readOnly
+                  placeholder="https://"
+                  className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600"
+                />
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label className="text-sm">Location</label>
                 <input
                   name="location"
                   type="text"
-                  placeholder="Item name"
+                  value={volunteers.location}
+                  readOnly
+                  
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
@@ -144,28 +132,21 @@ const AddVolunteer = () => {
                 <input
                   name="no_of_volunteer"
                   type="text"
-                  placeholder="no_of_volunteer"
-                  className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
-                />
-              </div>
-              
-              <div className="col-span-full sm:col-span-3">
-                <label className="text-sm">Organizer Mail</label>
-                <input
-                  name="organizer_mail"
-                  type="text"
-                  value={user.email}
+                  value={volunteers.no_of_volunteer}
                   readOnly
                   
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
-              <div className="col-span-full sm:col-span-3">
-              <p className="text-sm">Deadline : </p>
-                <DatePicker className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                  minDate={new Date()}
+              <div>
+                <label className="text-sm">Deadline</label>
+                <input
+                  name="deadline"
+                  type="text"
+                  value={volunteers.deadline.slice(0,10)}
+                  readOnly
+                  
+                  className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
               
@@ -173,14 +154,56 @@ const AddVolunteer = () => {
                 <label className="text-sm">Description</label>
                 <textarea
                   name="description"
-                  placeholder=""
-                  className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600"
+                  value={volunteers.description}
+                  readOnly
+                  className="p-2 w-full rounded-md"
                 ></textarea>
+              </div>
+              <div className="col-span-full sm:col-span-3">
+                <label className="text-sm">Organizer Mail</label>
+                <input
+                  name="organizer_mail"
+                  type="text"
+                  value={volunteers.email}
+                  readOnly
+                  
+                  className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
+                />
+              </div>
+              <div className="col-span-full sm:col-span-3">
+                <label className="text-sm">Volunteer Mail</label>
+                <input
+                  name="volunteer_mail"
+                  type="text"
+                  value={volunteerMail}
+                  readOnly
+                  
+                  className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
+                />
+              </div>
+              <div className="col-span-full sm:col-span-3">
+                <label className="text-sm">Suggestion</label>
+                <input
+                  name="suggestion"
+                  type="text"
+                  className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
+                />
+              </div>
+              <div className="col-span-full sm:col-span-3">
+                <label className="text-sm">Status</label>
+                <input
+                  name="status"
+                  type="text"
+                  defaultValue="Requested"
+                 
+                  
+                  className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
+                />
               </div>
             </div>
             <input
               type="submit"
-              value="Post"
+              value="Request"
               className="btn bg-gray-700 text-white"
             />
           </form>
@@ -190,4 +213,4 @@ const AddVolunteer = () => {
   );
 };
 
-export default AddVolunteer;
+export default BeVolunteer;
