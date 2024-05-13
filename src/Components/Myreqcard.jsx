@@ -46,7 +46,7 @@ const Myreqcard = ({volunteer}) => {
       <div>
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
-            <img src={image} alt="Shoes" className="rounded-xl" />
+            <img src={image} alt="Shoes" className="h-[160px] w-[280px] rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">{name}</h2>
@@ -54,7 +54,7 @@ const Myreqcard = ({volunteer}) => {
             <div className="card-actions">
               <button
                 onClick={() => handleDelete(_id)}
-                className="btn btn-primary"
+                className="btn text-white bg-red-600"
               >
                 Delete
               </button>

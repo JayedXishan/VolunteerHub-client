@@ -47,14 +47,14 @@ const MypostCard = ({ volunteer }) => {
       <div>
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
-            <img src={image} alt="Shoes" className="rounded-xl" />
+            <img src={image} alt="Shoes" className="h-[160px] w-[280px] rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">{name}</h2>
             <p>{description}</p>
             <div className="card-actions">
-              <Link to={`/updatepost/${_id}`} className="btn btn-primary">Update</Link>
-              <button onClick={() => handleDelete(_id)} className="btn btn-primary">Delete</button>
+              <Link to={`/updatepost/${_id}`} className="btn text-white  bg-[#4D869C]">Update</Link>
+              <button onClick={() => handleDelete(_id)} className="btn text-white bg-red-600">Delete</button>
             </div>
           </div>
         </div>
