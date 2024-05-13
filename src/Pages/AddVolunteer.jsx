@@ -1,10 +1,14 @@
 import React from "react";
 import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
 
 const AddVolunteer = () => {
   const { user } = useAuth() || {};
-
+  const [startDate, setStartDate] = useState(new Date());
+  console.log(startDate);
   const handleAdd = (e) => {
     e.preventDefault();
 
@@ -15,7 +19,8 @@ const AddVolunteer = () => {
     const category = form.Category.value;
     const location = form.location.value;
     const no_of_volunteer = form.no_of_volunteer.value;
-    const deadline = form.deadline.value;
+    const deadline = startDate;
+    // const deadline = form.deadline.value;
     // const time = form.time.value;
     // const status = form.status.value;
     const description = form.description.value;
@@ -31,8 +36,8 @@ const AddVolunteer = () => {
     } else if (category === "Animal welfare") {
       No = "4";
     } else if (category === "Others") {
-        No = "5";
-      }
+      No = "5";
+    }
 
     const item = {
       No,
@@ -142,13 +147,21 @@ const AddVolunteer = () => {
                   className="w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
-              <div className="col-span-full sm:col-span-3">
+              {/* <div className="col-span-full sm:col-span-3">
                 <label className="text-sm">Deadline</label>
                 <input
                   name="deadline"
                   type="text"
                   placeholder="deadline"
                   className="w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600"
+                />
+              </div> */}
+              <div>
+              <label className="text-sm">Deadline : </label>
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  minDate={new Date()}
                 />
               </div>
               <div className="col-span-full">
