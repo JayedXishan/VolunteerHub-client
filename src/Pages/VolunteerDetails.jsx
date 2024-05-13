@@ -7,7 +7,7 @@ const VolunteerDetails = () => {
   const volunteers = useLoaderData();
 
   return (
-    <div className="lg:w-[1170px] mx-auto">
+    <div className="lg:w-[1170px] mx-auto mt-[60px]">
       <div className="flex space-x-8">
         <div className="relative flex-1 flex-grow ">
           <img
@@ -23,26 +23,31 @@ const VolunteerDetails = () => {
         <div className="flex-1 flex justify-center items-center">
           <div className="flex-col space-y-2">
             <div className="flex space-x-2 items-center">
-              <FaCalendarAlt />
+              <FaCalendarAlt className="text-[#4D869C]" />
               <p>{volunteers.deadline.slice(0, 10)}</p>
             </div>
             <div className="flex space-x-2 items-center">
-              <FaUsers />
+              <FaUsers className="text-[#4D869C]" />
               <p>{volunteers.no_of_volunteer}</p>
             </div>
             <div className="flex space-x-2 items-center">
-              <FaMapLocationDot />
+              <FaMapLocationDot className="text-[#4D869C]" />
               <p>{volunteers.location}</p>
             </div>
-            <p className="">{volunteers.description}</p>
-
-            <div className="mt-[100px]">
-              <Link
-                className=" btn py-2 px-4 bg-[#4D869C] text-white"
-                to={`/bevolunteer/${volunteers._id}`}
-              >
-                Be a Volunteer
-              </Link>
+            <div className="flex-col space-y-8">
+              <div>
+                <p className="border-r-2 px-4 border-r-[#4D869C] border-l-2 border-l-[#4D869C]">
+                  {volunteers.description}
+                </p>
+              </div>
+              <div className="">
+                <Link
+                  className=" btn py-2 px-4 bg-[#4D869C] text-white"
+                  to={`/bevolunteer/${volunteers._id}`}
+                >
+                  Be a Volunteer
+                </Link>
+              </div>
             </div>
           </div>
         </div>
