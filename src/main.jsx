@@ -12,6 +12,7 @@ import NeedVolunteer from './Pages/NeedVolunteer';
 import MyProfile from './Pages/MyProfile';
 import Register from './Pages/Register';
 import Login from './Pages/Login';
+import AddVolunteer from './Pages/AddVolunteer';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/myprofile',
         element: <MyProfile></MyProfile>,
+      },
+      {
+        path: '/addpost',
+        element: <AddVolunteer></AddVolunteer>,
       },
       {
         path: '/login',
