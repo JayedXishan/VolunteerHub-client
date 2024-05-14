@@ -27,11 +27,11 @@ const Mypost = () => {
   return (
     <div className="lg:w-[1170px] mx-auto">
       <div className="w-full mb-[60px] mt-[100px]">
-        <h3 className="text-center text-2xl font-bold mb-4">
-          My Post
-        </h3>
+        <h3 className="text-center text-2xl font-bold mb-4">My Post</h3>
         <p className="w-[70%] text-center mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sapiente saepe beatae, doloremque numquam eum maiores rerum totam voluptas velit molestiae architecto explicabo cupiditate commodi autem sed? Maxime, expedita esse
+          Browse through diverse volunteer postings tailored to your interests
+          and skills. Find the perfect opportunity to lend a helping hand and
+          make a meaningful impact in your community.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3">
@@ -47,7 +47,9 @@ const Mypost = () => {
           My Requested Post
         </h3>
         <p className="w-[70%] text-center mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sapiente saepe beatae, doloremque numquam eum maiores rerum totam voluptas velit molestiae architecto explicabo cupiditate commodi autem sed? Maxime, expedita esse
+          Seeking dedicated volunteers for various projects and causes. Post
+          your volunteer opportunities and connect with passionate individuals
+          ready to contribute their time and skills for positive change.
         </p>
       </div>
       <div className="mb-[100px] grid grid-cols-1 lg:grid-cols-3">

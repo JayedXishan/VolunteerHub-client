@@ -22,10 +22,7 @@ const Aim = () => {
                 />
           </h3>
           <p className="lg:w-[70%] w-[90%] mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-            cupiditate iusto quidem! Repellendus ea aperiam, minima ducimus iste
-            magni ex in possimus quaerat iure neque aut, saepe dolor
-            perspiciatis deleniti.
+          Our volunteer hub connects passionate individuals with meaningful opportunities, empowering them to make a positive impact in their communities. Join us in fostering change and spreading kindness worldwide.
           </p>
         </div>
         <div className="lg:flex-1 mt-[20px] lg:mt-[0px]  mx-[25%] lg:mx-[0%] grid grid-cols-1 lg:grid-cols-2  gap-1">

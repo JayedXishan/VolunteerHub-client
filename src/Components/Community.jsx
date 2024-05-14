@@ -14,9 +14,7 @@ const Community = () => {
               Join Our Community Fast !
             </h1>
             <p className="py-6 text-white lg:w-[70%]">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+            Join our vibrant community of volunteers dedicated to making a difference. Explore opportunities, connect with causes, and create lasting change together.
             </p>
             <button className="btn px-[4] w-[110px] bg-[#7AB2B2]">Join</button>
           </div>

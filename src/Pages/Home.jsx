@@ -2,7 +2,8 @@ import React from 'react';
 import Banner from '../Components/Banner';
 import VolunteerContainer from '../Components/VolunteerContainer';
 import Aim from '../Components/Aim';
-import Community from '../assets/Community';
+import Community from '../Components/Community';
+
 
 
 const Home = () => {
