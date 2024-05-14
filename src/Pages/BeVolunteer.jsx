@@ -47,24 +47,24 @@ const BeVolunteer = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // Swal.fire({
-        //   title: "Good job!",
-        //   text: "Successfully Added a item!",
-        //   icon: "success",
-        // });
+        Swal.fire({
+          title: "Good job!",
+          text: "Request Done!",
+          icon: "success",
+        });
       });
 
-    // fetch("https://pictura-server.vercel.app/Category", {
-    //   method: "POST", // *GET, POST, PUT, DELETE, etc.
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(item),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //   });
+    fetch(`https://volunteer-hub-server.vercel.app/request/${volunteers._id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(item),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
