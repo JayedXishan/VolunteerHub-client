@@ -3,13 +3,24 @@ import { FaBookReader } from "react-icons/fa";
 import { MdVolunteerActivism } from "react-icons/md";
 import { FaBriefcaseMedical } from "react-icons/fa";
 import { MdNaturePeople } from "react-icons/md";
-
+import Typewriter from "typewriter-effect";
 const Aim = () => {
   return (
     <div className="lg:w-[1170px] mx-auto mt-[120px]">
       <div className="lg:flex lg:flex-row-reverse ">
       <div className="lg:flex-2 lg:w-[350px] lg:flex-grow  text-center lg:flex-col lg:justify-center lg:items-center lg:my-auto">
-          <h3 className="text-3xl font-extrabold mb-4">Our Focus and Aim</h3>
+          <h3 className="text-3xl font-extrabold mb-4">
+          <Typewriter
+                  options={{
+                    strings: ["Our Focus and Aim"],
+                    autoStart: true,
+                    loop: true,
+                    delay:75,
+                    typeSpeed:120,
+                    deleteSpeed:80,
+                  }}
+                />
+          </h3>
           <p className="lg:w-[70%] w-[90%] mx-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
             cupiditate iusto quidem! Repellendus ea aperiam, minima ducimus iste

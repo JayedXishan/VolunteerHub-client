@@ -1,7 +1,7 @@
 import React from "react";
 import Volunteer from "./Volunteer";
 import { Link, useLoaderData } from "react-router-dom";
-
+import Typewriter from "typewriter-effect";
 const VolunteerContainer = () => {
   const volunteers = useLoaderData();
 
@@ -9,7 +9,17 @@ const VolunteerContainer = () => {
     <div className="lg:w-[1170px] mx-auto my-[100px]">
       <div className="w-full mb-[60px]">
         <h3 className="text-center text-2xl font-bold mb-4">
-          Volunteer Needed Posts
+          
+          <Typewriter
+                  options={{
+                    strings: ["Volunteer Needed Posts"],
+                    autoStart: true,
+                    loop: true,
+                    delay:75,
+                    typeSpeed:120,
+                    deleteSpeed:80,
+                  }}
+                />
         </h3>
         <p className="w-[70%] text-center mx-auto">
           Explore our Art and Volunteer Section: A sanctuary for creatives,
