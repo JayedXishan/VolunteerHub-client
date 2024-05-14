@@ -15,11 +15,12 @@ import BeVolunteer from "./Pages/BeVolunteer";
 import Mypost from "./Pages/Mypost";
 import UpdatePost from "./Pages/UpdatePost";
 import PrivateRoute from "./Pages/PrivateRoute";
+import ErrorPage from "./Pages/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Parent></Parent>,
-    // errorElement: <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

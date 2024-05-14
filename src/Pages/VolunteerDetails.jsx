@@ -7,7 +7,7 @@ const VolunteerDetails = () => {
   const volunteers = useLoaderData();
 
   return (
-    <div className="lg:w-[1170px] mx-auto mt-[60px]">
+    <div className="lg:w-[1170px] mx-auto my-[60px]">
       <div className="flex space-x-8">
         <div className="relative flex-1 flex-grow ">
           <img

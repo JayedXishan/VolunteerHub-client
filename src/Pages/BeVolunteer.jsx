@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 const BeVolunteer = () => {
   const volunteers = useLoaderData();
   const { user } = useAuth() || {};
-  
 
   const handleReq = (e) => {
     e.preventDefault();
@@ -23,8 +22,6 @@ const BeVolunteer = () => {
     const status = form.status.value;
     const description = form.description.value;
     const email = user?.email;
-
-    
 
     const item = {
       name,
@@ -72,7 +69,7 @@ const BeVolunteer = () => {
 
   return (
     <div>
-      <div className="flex">
+      <div className="lg:flex">
         <div className="flex-grow flex-1 bg-gradient-to-br from-[#4D869C] via-[#7AB2B2] to-[#CDE8E5] flex justify-center items-center">
           <div className="w-[300px] h-[100px] border-2 p-4 flex justify-center items-center">
             <h3 className="text-4xl font-extrabold text-white">
@@ -81,7 +78,10 @@ const BeVolunteer = () => {
           </div>
         </div>
         <div className="p-6 flex-1 bg-[#CDE8E5] ">
-          <form onSubmit={handleReq} className="container flex flex-col mx-auto space-y-12">
+          <form
+            onSubmit={handleReq}
+            className="container flex flex-col mx-auto space-y-12"
+          >
             <div className="grid grid-cols-1 gap-4">
               <div className="col-span-full sm:col-span-3">
                 <label className="text-sm">Post Title</label>
@@ -90,7 +90,6 @@ const BeVolunteer = () => {
                   type="text"
                   value={volunteers.name}
                   readOnly
-                  
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
@@ -101,7 +100,6 @@ const BeVolunteer = () => {
                   type="text"
                   value={volunteers.image}
                   readOnly
-                 
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600"
                 />
               </div>
@@ -123,7 +121,6 @@ const BeVolunteer = () => {
                   type="text"
                   value={volunteers.location}
                   readOnly
-                  
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
@@ -134,7 +131,6 @@ const BeVolunteer = () => {
                   type="text"
                   value={volunteers.no_of_volunteer}
                   readOnly
-                  
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
@@ -143,13 +139,12 @@ const BeVolunteer = () => {
                 <input
                   name="deadline"
                   type="text"
-                  value={volunteers.deadline.slice(0,10)}
+                  value={volunteers.deadline.slice(0, 10)}
                   readOnly
-                  
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
-              
+
               <div className="col-span-full">
                 <label className="text-sm">Description</label>
                 <textarea
@@ -166,7 +161,6 @@ const BeVolunteer = () => {
                   type="text"
                   value={volunteers.email}
                   readOnly
-                  
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
@@ -177,7 +171,6 @@ const BeVolunteer = () => {
                   type="text"
                   value={user?.email}
                   readOnly
-                  
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>
@@ -195,8 +188,6 @@ const BeVolunteer = () => {
                   name="status"
                   type="text"
                   defaultValue="Requested"
-                 
-                  
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
                 />
               </div>

@@ -70,10 +70,10 @@ const AddVolunteer = () => {
 
   return (
     <div className="lg:w-[1170px] mx-auto">
-      <div className="flex">
+      <div className="lg:flex">
         <div className="flex-grow flex-1 bg-gradient-to-br from-[#4D869C] via-[#7AB2B2] to-[#CDE8E5] flex justify-center items-center">
           <div className="w-[300px] h-[100px] border-2 p-4 flex justify-center items-center">
-            <h3 className="text-4xl font-extrabold text-white">VolunteerHub</h3>
+            <h3 className="text-4xl font-extrabold text-white">Add Post</h3>
           </div>
         </div>
         <div className="p-6 flex-1 bg-[#CDE8E5] ">

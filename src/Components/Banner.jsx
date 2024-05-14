@@ -14,7 +14,7 @@ const Banner = () => {
               <h3 className=" text-white text-4xl font-extrabold">
                 Unleash Your Potential
               </h3>
-              <p className="mx-auto text-white opacity-75 mt-6 lg:mt-8 w-[70%]">
+              <p className="mx-auto text-white opacity-75 mt-6 lg:mt-8 w-[90%] lg:w-[70%]">
                 VolunteerHub Your Gateway to Fulfilling Volunteerism. From Local
                 Initiatives to Global Causes, Find Your Ideal Project and Start
                 Making a Meaningful Impact Today
@@ -29,7 +29,7 @@ const Banner = () => {
               <h3 className="text-white text-4xl font-extrabold">
                 Empower Your Community
               </h3>
-              <p className="mx-auto text-white opacity-75 mt-6 lg:mt-8 w-[70%]">
+              <p className="mx-auto text-white opacity-75 mt-6 lg:mt-8 w-[90%] lg:w-[70%]">
                 {" "}
                 VolunteerHub Connects Passion with Purpose - Join Today for
                 Meaningful Opportunities, Impactful Projects, and Lasting
@@ -45,7 +45,7 @@ const Banner = () => {
               <h3 className="text-white text-4xl font-extrabold">
                 Discover Your Purpose
               </h3>
-              <p className="mx-auto text-white mt-6 opacity-75 lg:mt-8 w-[70%]">
+              <p className="mx-auto text-white mt-6 opacity-75 lg:mt-8 w-[90%] lg:w-[70%]">
                 Where Compassion Meets Action. Find Volunteer Roles Tailored to
                 Your Skills, Interests, and Availability. Be the Change Your
                 Community Needs

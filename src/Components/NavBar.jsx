@@ -61,7 +61,7 @@ const NavBar = () => {
             </div>
 
             <Link to="/" onClick={()=>setActive('1')}  className="flex items-center p-2  ">
-              <span className="text-[#4D869C] lg:text-5xl text-3xl ">VolunteerHub</span>
+              <span className="text-[#4D869C] lg:text-5xl text-2xl ">VolunteerHub</span>
             </Link>
             <ul className="items-stretch hidden space-x-3 lg:flex text-gray-700 font-extralight ">
               <li className="flex">
@@ -147,7 +147,7 @@ const NavBar = () => {
                   <Link
                     to="/register"
                     onClick={()=>setActive('0')}
-                    className="self-center px-8 py-3  rounded bg-[#4D869C] text-white transition ease-linear delay-200 duration-300 hover:bg-[#102C57] hover:text-white "
+                    className="self-center lg:px-8 lg:py-3 p-2  rounded bg-[#4D869C] text-white transition ease-linear delay-200 duration-300 hover:bg-[#102C57] hover:text-white "
                   >
                     Sign up
                   </Link>
