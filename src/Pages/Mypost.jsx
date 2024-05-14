@@ -50,7 +50,7 @@ const Mypost = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sapiente saepe beatae, doloremque numquam eum maiores rerum totam voluptas velit molestiae architecto explicabo cupiditate commodi autem sed? Maxime, expedita esse
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3">
+      <div className="mb-[100px] grid grid-cols-1 lg:grid-cols-3">
         {req?.map((volunteer) => (
           <div>
             <Myreqcard volunteer={volunteer}></Myreqcard>

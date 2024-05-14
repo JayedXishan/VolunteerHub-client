@@ -55,17 +55,7 @@ const AddVolunteer = () => {
         });
       });
 
-    // fetch("https://pictura-server.vercel.app/Category", {
-    //   method: "POST", // *GET, POST, PUT, DELETE, etc.
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(item),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //   });
+   
   };
 
   return (
