@@ -24,7 +24,7 @@ const Myreqcard = ({volunteer}) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/request/${_id}`, {
+        fetch(`https://volunteer-hub-server.vercel.app/request/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

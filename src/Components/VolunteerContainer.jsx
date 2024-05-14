@@ -9,7 +9,7 @@ const VolunteerContainer = () => {
     <div className="lg:w-[1170px] mx-auto my-[100px]">
       <div className="w-full mb-[60px]">
         <h3 className="text-center text-2xl font-bold mb-4">
-          Our Arts and Volunteers{" "}
+          Volunteer Needed Posts
         </h3>
         <p className="w-[70%] text-center mx-auto">
           Explore our Art and Volunteer Section: A sanctuary for creatives,

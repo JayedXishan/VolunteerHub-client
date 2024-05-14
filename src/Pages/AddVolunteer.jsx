@@ -38,7 +38,7 @@ const AddVolunteer = () => {
       email,
     };
 
-    fetch("http://localhost:5000/volunteer", {
+    fetch("https://volunteer-hub-server.vercel.app/volunteer", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",

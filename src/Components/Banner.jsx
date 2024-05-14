@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Banner = () => {
   const [isActice, setActive] = useState("1");
   return (
-    <div className="lg:w-[1170px] mx-auto">
+    <div className="lg:w-[1170px] mx-auto mt-[25px]">
       <div className="relative">
         <div className="carousel w-full">
           <div

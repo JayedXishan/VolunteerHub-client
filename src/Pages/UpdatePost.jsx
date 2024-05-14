@@ -29,7 +29,7 @@ const UpdatePost = () => {
         const item = { _id,name,category, deadline, image,email, location,no_of_volunteer,description };
 
 
-        fetch(`http://localhost:5000/volunteer/${_id}`, {
+        fetch(`https://volunteer-hub-server.vercel.app/volunteer/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

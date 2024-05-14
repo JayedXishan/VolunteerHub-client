@@ -9,7 +9,7 @@ const Mypost = () => {
   const [item, setItem] = useState([]);
   const [req, setReq] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/mypost/${user?.email}`)
+    fetch(`https://volunteer-hub-server.vercel.app/mypost/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
@@ -17,7 +17,7 @@ const Mypost = () => {
   }, [user]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/request/${user?.email}`)
+    fetch(`https://volunteer-hub-server.vercel.app/request/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setReq(data);

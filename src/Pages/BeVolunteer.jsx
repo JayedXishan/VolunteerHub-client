@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const BeVolunteer = () => {
   const volunteers = useLoaderData();
   const { user } = useAuth() || {};
-  const volunteerMail=user.email;
+  
 
   const handleReq = (e) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const BeVolunteer = () => {
     const organizer_mail = form.organizer_mail.value;
     const status = form.status.value;
     const description = form.description.value;
-    const email = user.email;
+    const email = user?.email;
 
     
 
@@ -40,7 +40,7 @@ const BeVolunteer = () => {
       email,
     };
 
-    fetch("http://localhost:5000/request", {
+    fetch("https://volunteer-hub-server.vercel.app/request", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
@@ -175,7 +175,7 @@ const BeVolunteer = () => {
                 <input
                   name="volunteer_mail"
                   type="text"
-                  value={volunteerMail}
+                  value={user?.email}
                   readOnly
                   
                   className="p-2 w-full rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 "
