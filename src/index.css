@@ -8,21 +8,21 @@
 
 .bgImg1 {
    
-    background-image: linear-gradient(180.00deg, rgba(21, 11, 43, 0.9), rgba(21, 11, 43, 0.4) 100%), url(https://i.ibb.co/JB0YPwT/pexels-rdne-6646774.jpg);
+    background-image: linear-gradient(180.00deg, rgba(5, 64, 81, 0.9), rgba(80, 191, 210, 0.3) 100%), url(https://i.ibb.co/JB0YPwT/pexels-rdne-6646774.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
 }
 
 .bgImg2 {
-    background-image: linear-gradient(180.00deg, rgba(21, 11, 43, 0.9), rgba(21, 11, 43, 0.4) 100%), url(https://i.ibb.co/zJFxxJ5/pexels-shvetsa-5029855.jpg);
+    background-image: linear-gradient(180.00deg, rgba(5, 64, 81, 0.9), rgba(80, 191, 210, 0.3) 100%), url(https://i.ibb.co/zJFxxJ5/pexels-shvetsa-5029855.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
 }
 
 .bgImg3 {
-    background-image: linear-gradient(180.00deg, rgba(21, 11, 43, 0.9), rgba(21, 11, 43, 0.4) 100%), url(https://i.ibb.co/XShBTxc/290.jpg);
+    background-image: linear-gradient(180.00deg, rgba(5, 64, 81, 0.9), rgba(80, 191, 210, 0.3) 100%), url(https://i.ibb.co/XShBTxc/290.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 

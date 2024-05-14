@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Typewriter from "typewriter-effect";
 const Banner = () => {
   const [isActice, setActive] = useState("1");
   return (
@@ -12,7 +12,16 @@ const Banner = () => {
           >
             <div className="flex-col justify-center items-center mx-20 my-20 text-center">
               <h3 className=" text-white text-4xl font-extrabold">
-                Unleash Your Potential
+                <Typewriter
+                  options={{
+                    strings: ["Unleash Your Potential", "Unleash Your Talent"],
+                    autoStart: true,
+                    loop: true,
+                    delay:75,
+                    typeSpeed:120,
+                    deleteSpeed:80,
+                  }}
+                />
               </h3>
               <p className="mx-auto text-white opacity-75 mt-6 lg:mt-8 w-[90%] lg:w-[70%]">
                 VolunteerHub Your Gateway to Fulfilling Volunteerism. From Local
@@ -27,7 +36,18 @@ const Banner = () => {
           >
             <div className="flex-col text-center mx-20 my-20">
               <h3 className="text-white text-4xl font-extrabold">
-                Empower Your Community
+                
+                <Typewriter
+                  options={{
+                    strings: ["Empower Your Community", "Make Strong Connection"],
+                    autoStart: true,
+                    loop: true,
+                    delay:75,
+                    typeSpeed:120,
+                    deleteSpeed:80,
+                    
+                  }}
+                />
               </h3>
               <p className="mx-auto text-white opacity-75 mt-6 lg:mt-8 w-[90%] lg:w-[70%]">
                 {" "}
@@ -43,7 +63,18 @@ const Banner = () => {
           >
             <div className="flex-col text-center mx-20 my-20">
               <h3 className="text-white text-4xl font-extrabold">
-                Discover Your Purpose
+                
+                <Typewriter
+                  options={{
+                    strings: ["Discover Your Purpose", "Discover Your Dream"],
+                    autoStart: true,
+                    loop: true,
+                    delay:75,
+                    typeSpeed:120,
+                    deleteSpeed:80,
+                    
+                  }}
+                />
               </h3>
               <p className="mx-auto text-white mt-6 opacity-75 lg:mt-8 w-[90%] lg:w-[70%]">
                 Where Compassion Meets Action. Find Volunteer Roles Tailored to
